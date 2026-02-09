@@ -1,5 +1,4 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:myapp/models/goal.dart';
 import 'package:myapp/providers/goal_provider.dart';
 
 void main() {
