@@ -17,12 +17,6 @@
 .pub-cache/
 .pub/
 /build/
-/ios/
-/android/
-/web/
-/linux/
-/macos/
-/windows/
 /coverage/
 
 # IDE
@@ -38,4 +32,18 @@
 *.freezed.dart
 
 # Firebase
-firebase_options.dart
+lib/firebase_options.dart
+**/google-services.json
+**/GoogleService-Info.plist
+
+# Secrets
+**/.env
+**/key.properties
+*.jks
+*.keystore
+
+# Claude
+.claude/
+
+# Plan files
+**/PLAN*.md

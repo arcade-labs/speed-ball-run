@@ -1,5 +1,5 @@
-
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import '../providers/goal_provider.dart';
@@ -15,8 +15,15 @@ class _AddGoalScreenState extends State<AddGoalScreen> {
   final _titleController = TextEditingController();
 
   @override
+  void dispose() {
+    _titleController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.transparent,
       appBar: AppBar(
         title: Text('New Goal', style: GoogleFonts.lato()),
       ),
@@ -36,7 +43,7 @@ class _AddGoalScreenState extends State<AddGoalScreen> {
                 if (_titleController.text.isNotEmpty) {
                   Provider.of<GoalProvider>(context, listen: false)
                       .addGoal(_titleController.text);
-                  Navigator.pop(context);
+                  context.pop();
                 }
               },
               child: const Text('Add Goal'),

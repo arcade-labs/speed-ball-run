@@ -1,0 +1,12 @@
+flutter_native_splash:
+  # Background color of the splash screen
+  color: "#050505"
+  # Reuse the icon foreground as the splash logo
+  image: "assets/icon/app_icon_foreground.png"
+  android: true
+  ios: true
+  web: true
+  # Android 12+ uses a smaller centered icon
+  android_12:
+    color: "#050505"
+    image: "assets/icon/app_icon_foreground.png"

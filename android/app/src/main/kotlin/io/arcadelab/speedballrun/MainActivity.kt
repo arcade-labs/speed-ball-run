@@ -1,4 +1,4 @@
-package com.example.myapp
+package io.arcadelab.speedballrun
 
 import io.flutter.embedding.android.FlutterActivity
 
